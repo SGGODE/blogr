@@ -5,8 +5,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -15,5 +15,99 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.3;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header {
+  background: linear-gradient(-30deg, #ff8f70, #ff3d54);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header .logo {
+  margin-top: -10px;
+}
+
+@media (min-width: 64em) {
+  .header {
+    padding: 60px 165px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .header {
+    padding: 50px 20px;
+  }
+}
+
+.header .header-links {
+  margin-right: 700px;
+}
+
+.header .header-links a:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header .header-links a {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.10rem;
+  color: white;
+  font-weight: 700;
+}
+
+.header .header-links a::after {
+  content: url(../../images/icon-arrow-light.svg);
+  margin-left: 5px;
+}
+
+.container {
+  position: relative;
+  background-image: url(../../images/bg-pattern-intro.svg);
 }
 /*# sourceMappingURL=style.css.map */

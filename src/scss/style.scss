@@ -1,6 +1,13 @@
-@import "global";
 @import "variable";
 @import "mixins";
 @import "animations";
 
+@import "global";
+@import "header";
+
+
+.container {
+    position: relative;
+    background-image: url(../../images/bg-pattern-intro.svg);
+} 
 

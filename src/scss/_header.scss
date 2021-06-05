@@ -1,0 +1,39 @@
+.header {
+    background: linear-gradient(-30deg, $very-light-red, $light-red);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    .logo {
+        margin-top: -10px;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 60px 165px;
+    }
+
+    @include breakpoint-down(medium) {
+        padding: 50px 20px;
+    }
+
+
+    .header-links {
+        margin-right: 700px;
+        a:not(:last-child) {
+            margin-right: 50px;
+        }
+        a {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.10rem;
+            color: $white;
+            font-weight: 700;
+        }
+        a::after {
+            content: url(../../images/icon-arrow-light.svg);
+            margin-left: 5px;
+        }
+    }
+
+}
