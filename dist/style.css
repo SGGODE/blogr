@@ -64,6 +64,7 @@ a:hover {
 .btn {
   border-radius: 50px;
   border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 63.9375em) {
@@ -93,20 +94,24 @@ a:hover {
   background-color: white;
 }
 
+.primary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
 .secondary {
   color: white;
   background: transparent;
   border: solid 1px white;
 }
 
-.header {
-  font-family: 'Ubuntu', sans-serif;
+.secondary:hover {
+  color: #ff3d54;
+  background-color: white;
 }
 
-.header a {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: white;
+.header {
+  font-family: "Ubuntu", sans-serif;
 }
 
 .header .logo {
@@ -126,27 +131,70 @@ a:hover {
 }
 
 .header .header-links {
-  margin-right: 600px;
+  margin-right: 500px;
   font-family: "Ubuntu", sans-serif;
 }
 
-.header .header-links a:not(:last-child) {
+.header .header-links .navlink {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.header .header-links .navlink:not(:last-child) {
   margin-right: 50px;
 }
 
-.header .header-links a::after {
+.header .header-links .navlink::after {
   content: url(../../images/icon-arrow-light.svg);
   margin-left: 5px;
 }
 
+.header .header-links .navlink:hover ~ .section {
+  display: block;
+}
+
+.header .header-links .section {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10%;
+  line-height: 1.5;
+  width: 120px;
+  margin-right: 10px;
+  display: none;
+  position: absolute;
+}
+
+.header .header-links .section:hover {
+  display: block;
+}
+
+.header .header-links .section a {
+  display: block;
+}
+
+.header .header-links .section a:hover {
+  font-weight: 700;
+}
+
+.header .header-links .sectionlink {
+  color: black;
+}
+
 .login {
   margin-right: 30px;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.login:hover {
+  text-decoration: underline;
 }
 
 .hero {
   text-align: center;
-  font-family: 'Overpass', sans-serif;
-  padding-top: 60px;
+  font-family: "Overpass", sans-serif;
   padding-bottom: 150px;
 }
 
@@ -156,7 +204,7 @@ a:hover {
 }
 
 .hero button {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .hero .start-btn {
