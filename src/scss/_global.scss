@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
   }
   &-ai-c {
-      align-items: center;
+    align-items: center;
   }
 }
 
@@ -37,14 +37,45 @@ a {
 }
 
 .hide-for-mobile {
-  @include breakpoint-down(medium){
+  @include breakpoint-down(medium) {
     display: none;
   }
 }
 
 .hide-for-desktop {
-  @include breakpoint-up(large){
+  @include breakpoint-up(large) {
     display: none;
   }
 }
 
+.btn {
+  border-radius: 50px;
+  border: none; 
+  @include breakpoint-down(medium) {
+  font-weight: 500;
+    width: 120px;
+    height: 40px;
+  }
+  @include breakpoint-up(large) {
+    font-size: 1.15rem;
+    font-weight: 700;
+    width: 150px;
+    height: 50px;
+  }
+}
+
+.btn-none {
+  border: none;
+  background: none;
+}
+
+.primary {
+  color: $light-red;
+  background-color: $white;
+}
+
+.secondary {
+  color: $white;
+  background: transparent;
+  border: solid 1px $white;
+}
